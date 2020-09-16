@@ -1,0 +1,6 @@
+tb1<- read_csv("tb_up_msi_GSE360.csv")
+tb1<- data_frame(genes1=tb1$genes_up)
+tb2<- read_csv("GSE360_gene_list.csv")
+tb2<- data_frame(genes2=tb2$Gene.symbol)
+tb<-intersect(tb2$genes2, tb1$genes1)%>% as_data_frame()
+write.table(tb, file="GSE360_intersect_tb_up_msi_GSE360.csv", row.names=F, sep="\t")
