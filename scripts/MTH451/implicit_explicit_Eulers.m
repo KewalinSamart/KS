@@ -35,8 +35,8 @@ sol_exact = T_.^2+1/3*exp(-20*T_);
 
 figure; hold on
 
-explicit_plot = plot(T,Yex,'.','MarkerSize',20);
-implicit_plot = plot(T,Yim,'.','MarkerSize',20);
+explicit_plot = plot(T,Yex,'-.','MarkerSize',20);
+implicit_plot = plot(T,Yim,'-.','MarkerSize',20);
 exact_plot = plot(T_,sol_exact,'-','LineWidth',2);
 
 legend([explicit_plot;implicit_plot;exact_plot], 'Forward Eulers','Backward Eulers','Exact solution');
